@@ -7,7 +7,7 @@ from datetime import datetime
 from time import time
 from config import DB_USER, DB_PASSWORD, DB_HOST, DB_PORT, DB_NAME
 
-engine = create_engine('mysql://%s:%s@%s:%d/%s' % (DB_USER, DB_PASSWORD, DB_HOST, DB_PORT, DB_NAME))
+engine = create_engine(f'mysql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}')
 Base = declarative_base()
 
 
